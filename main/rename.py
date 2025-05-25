@@ -215,8 +215,7 @@ async def merge_and_upload(bot, msg: Message):
 
         await sts.delete()
     
-                        
-    if __name__ == '__main__':
-    app = Client("my_bot", bot_token=BOT_TOKEN)
-    app.run()
-        
+                            
+if __name__ == '__main__':
+app = Client("my_bot", bot_token=BOT_TOKEN)
+app.run()     
