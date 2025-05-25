@@ -93,23 +93,7 @@ def convert(seconds):
     return "%d:%02d:%02d" % (hour, minutes, seconds)
 
 #ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
-# Define heroku_restart function
-async def heroku_restart():
-    HEROKU_API = "HRKU-987b360b-e27e-43bf-b4e8-026e4c07521e"
-    HEROKU_APP_NAME = "infinitystartrename24bot"
-    x = None
-    if not HEROKU_API or not HEROKU_APP_NAME:
-        x = None
-    else:
-        try:
-            acc = heroku3.from_key(HEROKU_API)
-            bot = acc.apps()[HEROKU_APP_NAME]
-            bot.restart()
-            x = True
-        except Exception as e:
-            print(e)
-            x = False
-    return x
+
 
 #ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 #for merging downloading media
