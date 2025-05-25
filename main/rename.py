@@ -84,7 +84,7 @@ async def start_mergeaudio_command(bot, msg: Message):
     }
     await msg.reply_text("Send up to 10 video or audio files one by one. When done, press the 'Merge Now' button below or send `/videomerge filename`.")
 
-@Client.on_message((filters.video | filters.audio | filters.document) & filters.chat(GROUP))
+@Client.on_message((filters.video | filters.audio | filters.document) & filters.private)
 async def handle_media_files(bot, msg: Message):
     user_id = msg.from_user.id
     if user_id in merge_state:
