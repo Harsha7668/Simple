@@ -131,7 +131,7 @@ async def on_merge_button(bot, cq: CallbackQuery):
     # Delete the inline button message after starting merge
     await cq.message.delete()
 
-@Client.on_message(filters.command("videomerge") & private)
+@Client.on_message(filters.command("videomerge") & filters.private)
 async def start_video_merge_command(bot, msg: Message):
     user_id = msg.from_user.id
     if user_id not in merge_state or not merge_state[user_id]["files"]:
