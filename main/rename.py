@@ -16,7 +16,6 @@ from main.utils import upload_files, download_media, download_file_from_drive
 import aiohttp
 from pyrogram.errors import RPCError, FloodWait
 from main.ffmpeg import merge_videos_and_audios
-from googleaiclient.http import MediaFileUpload
 from main.gdrive import upload_to_google_drive, drive_service
 from googleapiclient.errors import HttpError
 from Database.database import db
